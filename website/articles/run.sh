@@ -1,4 +1,5 @@
 #!/bin/sh
-for i in `ls *.md`; do 
+# Run this script from website root folder
+for i in `ls ./articles/*.md`; do 
     markdown $i > $(echo $i | sed 's/.md/.html/')
 done;

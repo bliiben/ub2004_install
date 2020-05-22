@@ -1,6 +1,7 @@
 import os
 import re
 
+os.system('./articles/run.sh')
 with open('index.html.template') as indexfile:
     index = indexfile.read()
 
