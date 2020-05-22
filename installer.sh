@@ -31,3 +31,8 @@ ln -s /usr/bin/python3.7 /usr/local/bin/python
 
 # VPN
 apt-get install sshuttle
+
+# Utilities
+apt-get install unzip
+apt-get install markdown
+
