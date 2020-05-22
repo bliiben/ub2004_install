@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>Benjamin's blog</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="images/ben128x128.png">
+</head>
+<body>
+    <header>
+        <img src="images/ben128x128.png" width="32px" alt="Pixel Art of Benjamin">
+        Welcome on <a href='blog.benjamin-miquel.fr'>blog.benjamin-miquel.fr</a>
+    </header>
+    <section class="articles">
+        {articles}        
+    </section>
+    <section class="links_to_other">
+        {articles_links}
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@font-face {
+    font-family : openfont;
+    src :url(fonts/OpenSans-Regular.ttf)
+}
+
+body{
+    padding : 0;
+    margin : 0;
+    font-family: openfont; 
+}
+/*
+ * Header is on top of things
+ * */
+header {
+    padding :0.5em;
+    border-bottom : 1px solid lightgray;
+    display: block;
+    width : 100%;
+    height : 2em;
+    color : #111;
+    background: #eee;
+}
+
+/*
+ * Footer is bellow
+ * */
+footer {
+    display: block;
+    width: 100%;
+    height: 1em;
+}
