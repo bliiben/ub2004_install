@@ -8,12 +8,13 @@
 <body>
     <header>
         <img src="images/ben128x128.png" width="32px" alt="Pixel Art of Benjamin">
-        Welcome on <a href='blog.benjamin-miquel.fr'>blog.benjamin-miquel.fr</a>
+        Welcome on <a href='https://blog.benjamin-miquel.fr'>blog.benjamin-miquel.fr</a>
     </header>
     <section class="articles">
         {articles}        
     </section>
     <section class="links_to_other">
+        Here is some other articles I've written.
         {articles_links}
     </section>
     <footer>

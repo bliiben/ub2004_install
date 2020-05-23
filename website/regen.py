@@ -13,7 +13,7 @@ for _, _, filenames in os.walk('./articles'):
 
 html_files = sorted(html_files, reverse=True)
 articles = ''
-articles_links = ''
+articles_links = '<ul>'
 for i in range (min(len(html_files),5)):
     with open('./articles/'+html_files[i]) as article:
         articles += '<article>\n' + article.read() + '</article>\n' 
@@ -21,9 +21,10 @@ for i in range (min(len(html_files),5)):
 for html_file in html_files:
     link_value = html_file[8:].replace('_', ' ')
     link_value = link_value.replace('.html','')
-    articles_links += '<a href="./articles/{}">{}</a> '.format(html_file,
+    articles_links += '<li><a href="./articles/{}">{}</a> '.format(html_file,
             link_value)
 
+articles_links += '</ul>'
 with open('index.html','w') as indexfile:
     indexfile.write(index.format(articles=articles, articles_links=articles_links))
 
