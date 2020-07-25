@@ -12,13 +12,15 @@ Plugin 'mattn/emmet-vim'
 Plugin 'rainglow/vim'
 Plugin 'yegappan/mru'
 Plugin 'kien/ctrlp.vim'
+Plugin 'ekalinin/dockerfile.vim'
+Plugin 'sheerun/vim-polyglot'
 call vundle#end()
 
 filetype plugin indent on
 syntax on
 set number
 set mouse=a
-set textwidth=80
+set textwidth=240
 " This is because of the weird backspace behaviour
 set backspace=indent,eol,start
 
