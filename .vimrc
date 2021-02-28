@@ -5,6 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'mg979/vim-visual-multi'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -14,6 +15,8 @@ Plugin 'yegappan/mru'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'posva/vim-vue'
+Plugin 'mbbill/undotree'
 call vundle#end()
 
 filetype plugin indent on
@@ -47,9 +50,12 @@ nnoremap sl :vsplit<CR><C-w>l
 nnoremap sk  :split<CR><C-w>k
 nnoremap sj  :split<CR><C-w>j
 
+nnoremap <leader>ut :UndotreeToggle<CR>
+
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_custom_ignore = 'node_modules\|git'
 
 filetype plugin indent on
 set tabstop=4
@@ -63,4 +69,17 @@ if exists('+termguicolors')
 	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 	set termguicolors
+endif
+
+if has('persistent_undo')
+    set undodir=$HOME/.undodir
+    set undofile
+endif
+
+if &term =~ '^screen'
+" tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
 endif
